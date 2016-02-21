@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     var data = {
+    
         labels: ['DS', 'SNS', 'SPS', 'SRS', 'DSS', 'LSV'],
         series: [9911, 3625, 3241, 2259, 1828, 1361]
 
@@ -19,6 +20,7 @@ $(document).ready(function () {
     }
 
     $saberiglasove(glasovi);
+    
     $ispis = function(data)
     {
     $(".ct-legend").html("");
@@ -34,6 +36,15 @@ $(document).ready(function () {
             $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
         }
     }
+        
+        
+    new Chartist.Pie('.ct-chart', data, {
+        donut: true,
+        donutWidth: 100,
+        startAngle: 270,
+        total: ukupno,
+        showLabel: true
+    });
     }
     
     $ispis(data);
@@ -45,13 +56,6 @@ $(document).ready(function () {
     
    
 
-    new Chartist.Pie('.ct-chart', data, {
-        donut: true,
-        donutWidth: 100,
-        startAngle: 270,
-        total: ukupno,
-        showLabel: true
-    });
 
     console.log(count);
 
@@ -75,15 +79,6 @@ $(document).ready(function () {
 
 
 
-
-
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
 
@@ -103,13 +98,6 @@ $(document).ready(function () {
         $(".mesto").html("Бешка")
         $ispis(data);
 
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
     $("#cortanovci").click(function () {
@@ -139,16 +127,6 @@ $(document).ready(function () {
         }
 
 
-
-
-
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
     $("#ljukovo").click(function () {
@@ -168,17 +146,6 @@ $(document).ready(function () {
         $ispis(data);
 
 
-
-
-
-
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
     $("#maradik").click(function () {
@@ -197,18 +164,6 @@ $(document).ready(function () {
         $(".mesto").html("Mарадик");
         $ispis(data);
 
-
-
-
-
-
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
     $("#novislankamen").click(function () {
@@ -227,13 +182,6 @@ $(document).ready(function () {
         $(".mesto").html("Нови Сланкамен");
         $ispis(data);
 
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
     $("#novikarlovci").click(function () {
@@ -252,13 +200,6 @@ $(document).ready(function () {
         $(".mesto").html("Нови Карловци");
         $ispis(data);
 
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
     $("#starislankamen").click(function () {
@@ -277,13 +218,6 @@ $(document).ready(function () {
         $(".mesto").html("Стари Сланкамен");
         $ispis(data);
 
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
     $("#krcedin").click(function () {
@@ -302,13 +236,6 @@ $(document).ready(function () {
         $(".mesto").html("Крчедин");
         $ispis(data);
 
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
     $("#slvinogradi").click(function () {
@@ -325,15 +252,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Сланкаменачки Виногради");
-       $ispis(data);
+        $ispis(data);
 
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 
 
@@ -351,14 +271,7 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Инђија")
-        $ispis(data);
+        $ispis(data);   
 
-        new Chartist.Pie('.ct-chart', data, {
-            donut: true,
-            donutWidth: 100,
-            startAngle: 270,
-            total: ukupno,
-            showLabel: true
-        });
     });
 });

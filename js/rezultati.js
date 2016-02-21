@@ -19,9 +19,9 @@ $(document).ready(function () {
     }
 
     $saberiglasove(glasovi);
-
-
-    $(".mesto").html("Укупан резултат")
+    $ispis = function(data)
+    {
+    $(".ct-legend").html("");
     var c = {};
     $.each(data.labels, function (i, v) {
         c[v] = data.series[i];
@@ -34,6 +34,16 @@ $(document).ready(function () {
             $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
         }
     }
+    }
+    
+    $ispis(data);
+
+
+    $(".mesto").html("Укупан резултат")
+    
+    
+    
+   
 
     new Chartist.Pie('.ct-chart', data, {
         donut: true,
@@ -59,17 +69,9 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Јарковци");
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
-
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
+        
+    
+        $ispis(data);
 
 
 
@@ -99,16 +101,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Бешка")
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
+        $ispis(data);
+
         new Chartist.Pie('.ct-chart', data, {
             donut: true,
             donutWidth: 100,
@@ -171,17 +165,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Љуково");
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
+        $ispis(data);
 
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
 
 
 
@@ -210,17 +195,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Mарадик");
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
+        $ispis(data);
 
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
 
 
 
@@ -249,17 +225,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Нови Сланкамен");
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
+        $ispis(data);
 
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
         new Chartist.Pie('.ct-chart', data, {
             donut: true,
             donutWidth: 100,
@@ -283,17 +250,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Нови Карловци");
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
+        $ispis(data);
 
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
         new Chartist.Pie('.ct-chart', data, {
             donut: true,
             donutWidth: 100,
@@ -317,17 +275,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Стари Сланкамен");
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
+        $ispis(data);
 
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%)</li>");
-            }
-        }
         new Chartist.Pie('.ct-chart', data, {
             donut: true,
             donutWidth: 100,
@@ -351,17 +300,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Крчедин");
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
+        $ispis(data);
 
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
         new Chartist.Pie('.ct-chart', data, {
             donut: true,
             donutWidth: 100,
@@ -385,17 +325,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Сланкаменачки Виногради");
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
+       $ispis(data);
 
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
         new Chartist.Pie('.ct-chart', data, {
             donut: true,
             donutWidth: 100,
@@ -420,16 +351,8 @@ $(document).ready(function () {
 
 
         $(".mesto").html("Инђија")
-        $(".ct-legend").html("");
-        var c = {};
-        $.each(data.labels, function (i, v) {
-            c[v] = data.series[i];
-        });
-        for (var key in c) {
-            if (c.hasOwnProperty(key)) {
-                $(".ct-legend").append("<li><strong> " + key + "</strong>: " + c[key] + "(" + Math.floor((c[key] / count) * 100) + "%) </li>");
-            }
-        }
+        $ispis(data);
+
         new Chartist.Pie('.ct-chart', data, {
             donut: true,
             donutWidth: 100,

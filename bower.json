@@ -1,0 +1,22 @@
+{
+  "name": "izbori2012",
+  "authors": [
+    "skendzicr <ckehua@gmail.com>"
+  ],
+  "description": "Rezultati izbora u opstini Indjija po naseljenim mestima",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chartist": "~0.9.5",
+    "jquery": "^2.2.0"
+  }
+}

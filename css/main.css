@@ -1,0 +1,50 @@
+#indjija {
+    fill: hsl(120, 98%, 30%);
+}
+
+#indjija g {
+    transition: .3s;
+}
+
+#indjija g:hover {
+    fill: hsl(120, 98%, 60%);
+    cursor: pointer;
+}
+
+.ct-label {
+    fill: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.ct-series-a .ct-slice-donut {
+    stroke: #fef200;
+}
+
+.ct-series-b .ct-slice-donut {
+    stroke: #014993;
+}
+
+.ct-series-c .ct-slice-donut {
+    stroke: #e11a27;
+}
+
+.ct-series-d .ct-slice-donut {
+    stroke: #021b81;
+}
+
+.ct-series-e .ct-slice-donut {
+    stroke: #00cdff;
+}
+
+.ct-legend {
+    position: absolute;
+    top: 55%;
+    padding: 0;
+}
+
+.ct-legend li {
+    list-style: none;
+    display: inline-block;
+}
